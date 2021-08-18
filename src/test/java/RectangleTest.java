@@ -37,4 +37,42 @@ public class RectangleTest {
         int actualArea = obj.area();
         assertEquals(expectedArea, actualArea);
     }
+
+    @Test
+    void toFindPerimeterOfRectangleWithPositiveLengthAndBreadth()
+    {
+        Rectangle obj = new Rectangle(6,4);
+        int expectedArea = 20;
+        int actualArea = obj.perimeter();
+        assertEquals(expectedArea, actualArea);
+    }
+
+    @Test
+    void toFindPerimeterOfRectangleWithPositiveLengthAndNegativeBreadth()
+    {
+        Rectangle obj = new Rectangle(6,-4);
+        int expectedArea = 4;
+        int actualArea = obj.perimeter();
+        assertEquals(expectedArea, actualArea);
+    }
+
+    @Test
+    void toFindPerimeterOfRectangleWithNegativeLengthAndPositiveBreadth()
+    {
+        Rectangle obj = new Rectangle(-6,4);
+        int expectedArea = -4;
+        int actualArea = obj.perimeter();
+        assertEquals(expectedArea, actualArea);
+    }
+
+    @Test
+    void toFindPerimeterOfRectangleWithNegativeLengthAndBreadth()
+    {
+        Rectangle obj = new Rectangle(-6,-4);
+        int expectedArea = -20;
+        int actualArea = obj.perimeter();
+        assertEquals(expectedArea, actualArea);
+    }
+
+
 }
