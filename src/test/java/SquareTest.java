@@ -18,4 +18,22 @@ public class SquareTest {
         int actualArea = obj.area();
         assertEquals(expectedArea, actualArea);
     }
+
+    @Test
+    void toFindPerimeterOfSquareWithPositiveSides()
+    {
+        Square obj = new Square(6);
+        int expectedArea = 24;
+        int actualArea = obj.perimeter();
+        assertEquals(expectedArea, actualArea);
+    }
+
+    @Test
+    void toFindPerimeterOfSquareWithNegativeSide()
+    {
+        Square obj = new Square(-6);
+        int expectedArea = -24;
+        int actualArea = obj.perimeter();
+        assertEquals(expectedArea, actualArea);
+    }
 }
